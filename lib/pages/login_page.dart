@@ -13,7 +13,7 @@ class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
 
   moveToHome(BuildContext context) async {
-    if (_formKey.currentState.validate()) {
+    if (_formKey.currentState!.validate()) {
       setState(() {
         changeButton = true;
       });
@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                         setState(() {});
                       },
                       validator: (value){
-                        if (value.isEmpty) {
+                        if (value!.isEmpty) {
                           return "Password cannot be empty";
                         } else if (value.length < 6) {
                           return "Password length should be atleast 6";
@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                         labelText: "Password",
                       ),
                       validator: (value) {
-                        if (value.isEmpty) {
+                        if (value!.isEmpty) {
                           return "Password cannot be empty";
                         }
 
