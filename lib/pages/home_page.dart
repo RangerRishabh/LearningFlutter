@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   final int hrs = 8;
@@ -15,7 +16,7 @@ class HomePage extends StatelessWidget {
           child: Text("Learning flutter in $hrs hours via $name "),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
